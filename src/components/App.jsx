@@ -1,5 +1,5 @@
 import { FormContact } from './Form/Form';
-// import { ListContacts } from './List/List';
+import { ListContacts } from './List/List';
 import { Filter } from './Filter/Filter';
 
 export const App = () => {
@@ -14,7 +14,7 @@ export const App = () => {
       <FormContact />
       <Filter />
       <h2>Contacts</h2>
-      {/* <ListContacts /> */}
+      <ListContacts />
     </div>
   );
 };

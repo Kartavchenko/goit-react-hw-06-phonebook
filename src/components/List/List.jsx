@@ -48,6 +48,6 @@ export const ListContacts = () => {
 };
 
 ListContacts.propTypes = {
-  // contacts: PropTypes.array,
+  arrayContacts: PropTypes.array,
   button: PropTypes.element,
 };

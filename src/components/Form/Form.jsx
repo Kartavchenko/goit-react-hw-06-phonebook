@@ -9,9 +9,7 @@ export const FormContact = () => {
   const handleSubmit = e => {
     e.preventDefault();
     const form = e.target;
-    if (form.elements.name.value) {
-      return alert('this name alredy have in your contacts');
-    }
+
     dispatch(
       addContact({
         id: nanoid(),

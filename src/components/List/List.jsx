@@ -8,13 +8,13 @@ export const ListContacts = () => {
   const dispatch = useDispatch();
 
   const getFilteredContacts = () => {
-    const tolowerCase = filterContact.toLocaleLowerCase();
+    const lowerCase = filterContact.toLowerCase();
     const filterUser = userContact.filter(({ name, number }) => {
-      const normalizeName = name.toLocaleLowerCase();
-      const normalizeNamber = number.toLocaleLowerCase();
+      const normalizeName = name.toLowerCase();
+      const normalizeNamber = number.toLowerCase();
       const result =
-        normalizeName.includes(tolowerCase) ||
-        normalizeNamber.includes(tolowerCase);
+        normalizeName.includes(lowerCase) ||
+        normalizeNamber.includes(lowerCase);
       return result;
     });
     return filterUser;

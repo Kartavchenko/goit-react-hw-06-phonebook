@@ -1,15 +1,4 @@
-import { filterContacts } from '../../redax/filterSlise';
-import { useDispatch, useSelector } from 'react-redux';
-
-export function Filter() {
-  const dispatch = useDispatch();
-  const filter = useSelector(state => state.search);
-
-  const handleFilter = e => {
-    const search = e.target.value;
-    dispatch(filterContacts(search));
-  };
-
+export function Filter({ filter, handleFilter }) {
   return (
     <label
       style={{

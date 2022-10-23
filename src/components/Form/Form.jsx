@@ -1,25 +1,6 @@
 import PropTypes from 'prop-types';
-import { useDispatch } from 'react-redux';
-import { nanoid } from '@reduxjs/toolkit';
-import { addContact } from 'redax/contactsSlice';
 
-export const FormContact = () => {
-  const dispatch = useDispatch();
-
-  const handleSubmit = e => {
-    e.preventDefault();
-    const form = e.target;
-
-    dispatch(
-      addContact({
-        id: nanoid(),
-        name: form.elements.name.value,
-        number: form.elements.number.value,
-      })
-    );
-    form.reset();
-  };
-
+export const FormContact = ({ handleSubmit }) => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
